@@ -7,8 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+// Свойства - аутлеты, пуб свойства, приватные, инициализаторы
 
+enum CurrentLight {             // текущий свет
+    case red, yellow, green
+}
+
+class ViewController: UIViewController {
+    @IBOutlet var redLight: UIView!
+    @IBOutlet var yellowLight: UIView!
+    @IBOutlet var greenLight: UIView!
+    
+    @IBOutlet var startButton: UIButton!
+    
+    // методы переопределения, айби экшаны, публичные методы класса, приватные методы
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

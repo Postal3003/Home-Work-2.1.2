@@ -51,6 +51,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="tcb-5G-DSs" id="mu1-fK-jc4"/>
+                        <outlet property="redLight" destination="zmR-bJ-p0F" id="J6i-qE-BNE"/>
+                        <outlet property="startButton" destination="FQR-b5-ZcU" id="fIt-CO-xnD"/>
+                        <outlet property="yellowLight" destination="ILt-eE-hyJ" id="pFz-rR-n2r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
