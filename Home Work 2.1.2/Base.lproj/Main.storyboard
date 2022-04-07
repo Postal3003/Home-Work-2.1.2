@@ -16,25 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zmR-bJ-p0F">
-                                <rect key="frame" x="130" y="50" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILt-eE-hyJ">
-                                <rect key="frame" x="130" y="195" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcb-5G-DSs">
-                                <rect key="frame" x="130" y="340" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQR-b5-ZcU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQR-b5-ZcU">
                                 <rect key="frame" x="30" y="585" width="315" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FQR-b5-ZcU" secondAttribute="height" multiplier="45:7" id="PnK-nd-IhP"/>
+                                    <constraint firstAttribute="height" constant="49" id="lxd-xy-vh7"/>
+                                    <constraint firstAttribute="width" constant="315" id="rJ8-B9-cPq"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -47,12 +36,40 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oss-2h-XQH"/>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Of-7s-h4f"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-8u-aI5">
+                                <rect key="frame" x="130" y="54" width="115" height="405"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmR-bJ-p0F">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILt-eE-hyJ">
+                                        <rect key="frame" x="0.0" y="145" width="115" height="115"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcb-5G-DSs">
+                                        <rect key="frame" x="0.0" y="290" width="115" height="115"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="OqY-pI-82R"/>
+                                    <constraint firstAttribute="height" constant="405" id="RSL-9L-oCi"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="ssh-8u-aI5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="6Q3-id-Zpv"/>
+                            <constraint firstItem="ssh-8u-aI5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6nM-9l-ScW"/>
+                            <constraint firstItem="FQR-b5-ZcU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="315:667" id="KJ3-Bk-rTD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FQR-b5-ZcU" secondAttribute="bottom" constant="33" id="ONJ-Ml-wo9"/>
+                            <constraint firstItem="FQR-b5-ZcU" firstAttribute="centerX" secondItem="ssh-8u-aI5" secondAttribute="centerX" id="xYG-OV-Rzv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLight" destination="tcb-5G-DSs" id="mu1-fK-jc4"/>
